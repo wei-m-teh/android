@@ -1,4 +1,4 @@
-android-training
+android
 ================
 
 Public repository for android application samples.
