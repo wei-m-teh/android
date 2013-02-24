@@ -35,6 +35,7 @@ import android.widget.TextView;
 
 /**
  * The collection demo demonstrates how to scroll horizontally with tabs by swiping on the detail display. 
+ * The sample is obtained almost entirely from the android sample applcation.
  * @author weiteh
  *
  */
