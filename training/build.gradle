@@ -1,0 +1,57 @@
+apply plugin: 'android'
+apply plugin: 'maven'
+
+buildscript {
+
+repositories {
+    mavenCentral()
+	maven {
+	        url 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+    }
+  }
+//  dependencies {
+//    classpath 'org.gradle.api.plugins:gradle-android-plugin:1.2.2-SNAPSHOT'
+//  }
+    dependencies {
+        classpath  files('/Users/weiteh/dev/repositories/git/gradle-android-plugin-master/build/libs/gradle-android-plugin-1.2.2-SNAPSHOT.jar')
+  }
+}
+
+dependencies {
+    compile 'com.google.android:support-v4:r7'
+}
+
+repositories {
+    mavenCentral()
+	maven {
+	        url 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+    }
+}
+
+sourceSets {
+  main {
+    java {
+      srcDir 'src'
+    }
+  }
+}
+
+// Sets the package version
+version = "1.0.0-SNAPSHOT"
+group = "com.android.training"
+// Signing configuration, valid for all builds (1)
+//androidSignAndAlign {
+//  keyStore = "Users/weiteh/keystore"
+//  keyAlias = "my-key-alias"
+//  keyStorePassword = "mystorepass"
+//  keyAliasPassword = "myaliaspass"
+//}
+
+processResources {
+  expand (project.properties)
+}
+// Configure a dedicated debug build (3)
+task configureDebug << {
+  jar.classifier = "debug"
+}
+
