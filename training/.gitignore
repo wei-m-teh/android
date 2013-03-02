@@ -1,3 +1,6 @@
 /gen
 /build
-.gradle
+/.gradle
+.project
+/.settings
+.classpath
