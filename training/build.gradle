@@ -9,10 +9,7 @@ repositories {
 	        url 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
     }
   }
-//  dependencies {
-//    classpath 'org.gradle.api.plugins:gradle-android-plugin:1.2.2-SNAPSHOT'
-//  }
-    dependencies {
+  dependencies {
         classpath  files('/Users/weiteh/dev/repositories/git/gradle-android-plugin-master/build/libs/gradle-android-plugin-1.2.2-SNAPSHOT.jar')
   }
 }
@@ -24,7 +21,7 @@ dependencies {
 repositories {
     mavenCentral()
 	maven {
-	        url 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+       url 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
     }
 }
 
